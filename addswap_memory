@@ -61,7 +61,8 @@ swapsize(){
 
     if [ "$mem" -lt 2048 ]
     then
-      arg=$(("$mem" * 2))
+#       arg=$(("$mem" * 2))
+        arg="$mem"
 
     elif [ "$mem" -gt 2048 ] && [ "$mem" -le 8192 ]
     then
