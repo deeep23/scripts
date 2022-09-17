@@ -77,17 +77,17 @@ swapsize(){
 var=$( swapsize )
 
 
-check(){
-  echo -n " Do you want to add swap memory? (y/n): "; read proceed
-   if [ "$proceed" == "y" ]; then
-      echo ""
-      add_swap
-      echo "Setup swap complete! Check output to confirm everything is good."
-   else
-     echo "You choose to exit."
-     exit 1
-   fi
-}
+# check(){
+#   echo -n " Do you want to add swap memory? (y/n): "; read proceed
+#    if [ "$proceed" == "y" ]; then
+#       echo ""
+#       add_swap
+#       echo "Setup swap complete! Check output to confirm everything is good."
+#    else
+#      echo "You choose to exit."
+#      exit 1
+#    fi
+# }
 
 
 function Main() {
@@ -97,7 +97,7 @@ function Main() {
     if [[ "$isSwapOn" == "" ]]; then
         echo "No swap has been configured"
         echo ""
-        check
+        add_swap
     else
         echo "Swap Already Available. If required, firstly remove swap and then execute script again."
         echo "current Swap is: $gb G"
